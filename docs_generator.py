@@ -35,7 +35,7 @@ def print_newline():
     Add new line
 
     """
-    print ""
+    print("")
 
 
 def print_functions(baseclass):
@@ -43,7 +43,7 @@ def print_functions(baseclass):
             baseclass, predicate=inspect.ismethod):
         if func_name is not '__init__' and not func_name.startswith('_'):
             func = getattr(baseclass, func_name)
-            print(doc2md.doc2md(func.__doc__, make_function_name(func, func_name), type=1))
+            print((doc2md.doc2md(func.__doc__, make_function_name(func, func_name), type=1)))
 
 
 def make_function_name(func, func_name):
@@ -56,44 +56,44 @@ def make_function_name(func, func_name):
 
 def main():
 
-    print(doc2md.doc2md(resin.__doc__, 'Resin Python SDK', type=0))
+    print((doc2md.doc2md(resin.__doc__, 'Resin Python SDK', type=0)))
     print_newline()
     print('## Table of Contents')
-    print(doc2md.make_toc(Table_Of_Content))
+    print((doc2md.make_toc(Table_Of_Content)))
     print_newline()
-    print(doc2md.doc2md(resin.models.__doc__, 'Models', type=0))
-    print(doc2md.doc2md(
-        resin.models.application.Application.__doc__, 'Application', type=0))
+    print((doc2md.doc2md(resin.models.__doc__, 'Models', type=0)))
+    print((doc2md.doc2md(
+        resin.models.application.Application.__doc__, 'Application', type=0)))
     print_functions(resin.models.application.Application)
-    print(doc2md.doc2md(resin.models.device.Device.__doc__, 'Device', type=0))
+    print((doc2md.doc2md(resin.models.device.Device.__doc__, 'Device', type=0)))
     print_functions(resin.models.device.Device)
-    print(doc2md.doc2md(resin.models.config.Config.__doc__, 'Config', type=0))
+    print((doc2md.doc2md(resin.models.config.Config.__doc__, 'Config', type=0)))
     print_functions(resin.models.config.Config)
-    print(doc2md.doc2md(
-        resin.models.device_os.DeviceOs.__doc__, 'DeviceOs', type=0))
+    print((doc2md.doc2md(
+        resin.models.device_os.DeviceOs.__doc__, 'DeviceOs', type=0)))
     print_functions(resin.models.device_os.DeviceOs)
-    print(doc2md.doc2md(
+    print((doc2md.doc2md(
         resin.models.environment_variables.EnvironmentVariable.__doc__,
-        'EnvironmentVariable', type=0))
-    print(doc2md.doc2md(
+        'EnvironmentVariable', type=0)))
+    print((doc2md.doc2md(
         resin.models.environment_variables.ApplicationEnvVariable.__doc__,
-        'ApplicationEnvVariable', type=0))
+        'ApplicationEnvVariable', type=0)))
     print_functions(resin.models.environment_variables.ApplicationEnvVariable)
-    print(doc2md.doc2md(
+    print((doc2md.doc2md(
         resin.models.environment_variables.DeviceEnvVariable.__doc__,
-        'DeviceEnvVariable', type=0))
+        'DeviceEnvVariable', type=0)))
     print_functions(resin.models.environment_variables.DeviceEnvVariable)
-    print(doc2md.doc2md(resin.models.key.Key.__doc__, 'Key', type=0))
+    print((doc2md.doc2md(resin.models.key.Key.__doc__, 'Key', type=0)))
     print_functions(resin.models.key.Key)
-    print(doc2md.doc2md(resin.models.supervisor.Supervisor.__doc__, 'Supervisor', type=0))
+    print((doc2md.doc2md(resin.models.supervisor.Supervisor.__doc__, 'Supervisor', type=0)))
     print_functions(resin.models.supervisor.Supervisor)
-    print(doc2md.doc2md(resin.auth.Auth.__doc__, 'Auth', type=0))
+    print((doc2md.doc2md(resin.auth.Auth.__doc__, 'Auth', type=0)))
     print_functions(resin.auth.Auth)
-    print(doc2md.doc2md(resin.logs.Logs.__doc__, 'Logs', type=0))
+    print((doc2md.doc2md(resin.logs.Logs.__doc__, 'Logs', type=0)))
     print_functions(resin.logs.Logs)
-    print(doc2md.doc2md(resin.settings.Settings.__doc__, 'Settings', type=0))
+    print((doc2md.doc2md(resin.settings.Settings.__doc__, 'Settings', type=0)))
     print_functions(resin.settings.Settings)
-    print(doc2md.doc2md(resin.twofactor_auth.TwoFactorAuth.__doc__, 'TwoFactorAuth', type=0))
+    print((doc2md.doc2md(resin.twofactor_auth.TwoFactorAuth.__doc__, 'TwoFactorAuth', type=0)))
     print_functions(resin.twofactor_auth.TwoFactorAuth)
 
 if __name__ == '__main__':

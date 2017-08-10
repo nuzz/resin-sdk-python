@@ -296,7 +296,7 @@ def main(args=None):
     module = importlib.import_module(mod_name)
 
     if args.all:
-        print(mod2md(module, title, 'API', toc=args.toc))
+        print((mod2md(module, title, 'API', toc=args.toc)))
 
     else:
         if args.entry:
@@ -304,7 +304,7 @@ def main(args=None):
         else:
             docstr = module.__doc__
 
-        print(doc2md(docstr, title, toc=args.toc))
+        print((doc2md(docstr, title, toc=args.toc)))
 
 if __name__ == "__main__":
     main()

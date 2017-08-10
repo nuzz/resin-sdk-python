@@ -1,6 +1,6 @@
-from __future__ import print_function
 
-import ConfigParser
+
+import configparser
 import os.path as Path
 import os
 import shutil
@@ -58,7 +58,7 @@ class Settings(object):
             print(Message.INVALID_SETTINGS.format(path=config_file_path), file=sys.stderr)
 
     def __write_settings(self):
-        config = ConfigParser.ConfigParser()
+        config = configparser.ConfigParser()
         config.add_section(self.CONFIG_SECTION)
         for key in self._setting:
             config.set(self.CONFIG_SECTION, key, self._setting[key])
@@ -69,7 +69,7 @@ class Settings(object):
             config.write(config_file)
 
     def __read_settings(self):
-        config_reader = ConfigParser.ConfigParser()
+        config_reader = configparser.ConfigParser()
         config_reader.read(Path.join(self._setting['data_directory'],
                                      self.CONFIG_FILENAME))
         config_data = {}
