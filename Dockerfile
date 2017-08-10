@@ -5,7 +5,7 @@ RUN apk --update upgrade && apk add \
     libffi-dev \
     musl-dev \
     openssl-dev && \
-    pip install git+https://github.com/nuzz/resin-sdk-python.git && \
+    pip install git+https://github.com/nuzz/resin-sdk-python.git
 
 FROM python:3.6-alpine
 COPY --from=python-base /usr/local/lib/python3.6/site-packages/ /usr/local/lib/python3.6/site-packages/
